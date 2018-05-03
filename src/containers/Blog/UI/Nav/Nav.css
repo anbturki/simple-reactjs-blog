@@ -1,0 +1,11 @@
+.nav {
+  margin: 0;
+  text-align: center;
+  background-color: #f3f3f3 
+}
+
+.nav li {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+}

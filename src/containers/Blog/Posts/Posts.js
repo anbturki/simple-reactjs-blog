@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'
+import {NavLink} from 'react-router-dom'
 class Posts extends Component{
   constructor(props)
   {
@@ -31,10 +32,12 @@ class Posts extends Component{
       posts = Object.keys(this.state.model).map(postKey => {
         let post = this.state.model[postKey]
         return (
-          <div className="post" key={postKey}>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-          </div>
+            <div className="post" key={postKey}>
+              <NavLink to={'/'+postKey}>
+                <h1>{post.title}</h1>
+              </NavLink>
+              <p className="post-content">{post.body}</p>
+            </div>
         )
       })
     }
